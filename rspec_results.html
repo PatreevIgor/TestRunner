@@ -1,5 +1,26 @@
-..
+F*
 
-Finished in 0.01765 seconds (files took 4.71 seconds to load)
-2 examples, 0 failures
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) True of false tests thes test will be false
+     # Temporarily skipped with xit
+     # ./spec/web/selenium_test_spec.rb:20
+
+Failures:
+
+  1) True of false tests thes test will be true
+     Failure/Error: expect(first_link.text).to eq("Learning Selenium Java Hello World Example - Digital App Consultancy")
+
+       expected: "Learning Selenium Java Hello World Example - Digital App Consultancy"
+            got: "Hello Selenium: SELENIUM WEBDRIVER FREE TUTORIALS ..."
+
+       (compared using ==)
+     # ./spec/web/selenium_test_spec.rb:17:in `block (2 levels) in <top (required)>'
+
+Finished in 2.9 seconds (files took 5.65 seconds to load)
+2 examples, 1 failure, 1 pending
+
+Failed examples:
+
+rspec ./spec/web/selenium_test_spec.rb:10 # True of false tests thes test will be true
 

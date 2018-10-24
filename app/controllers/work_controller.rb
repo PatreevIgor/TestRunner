@@ -2,7 +2,7 @@
 
 class WorkController < ApplicationController
   def button_run_web_autotests
-    `rspec spec --out rspec_results.html`
+    `rspec spec/web --out rspec_results.html`
 
     redirect_to root_path
   end
