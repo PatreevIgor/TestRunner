@@ -35,7 +35,12 @@
     <div class="jumbotron">
       <h1>Web auto testing</h1>
       <p class="lead">Description.</p>
-      <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">Run Web auto tests &raquo;</a>
+      <div>
+       <%= form_tag(button_run_web_autotests_work_index_path, method: 'post') do %>
+         <%= submit_tag('Run Web auto tests', class: 'btn btn-lg btn-primary') %>
+       <% end %>
+      </div>
+      <div><%= @rspec_result %></div>
     </div>
   </main>
   <main role="main" class="container">

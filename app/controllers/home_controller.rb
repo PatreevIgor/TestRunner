@@ -2,6 +2,9 @@
 
 class HomeController < ApplicationController
   def index
-    # some code
+    @rspec_result = ''
+    File.open('rspec_results.html').each do |line|
+      @rspec_result += line
+    end
   end
 end
