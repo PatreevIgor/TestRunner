@@ -2,9 +2,13 @@
 
 class HomeController < ApplicationController
   def index
-    @rspec_result = ''
-    File.open('rspec_results.html').each do |line|
-      @rspec_result += line
-    end
+    @rspec_web_result  = result_presenter.web_rspec_result
+    @rspec_soap_result = result_presenter.soap_rspec_result
+  end
+
+  private
+
+  def result_presenter
+    @result_presenter ||= ResultPresenter.new
   end
 end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :work do
     collection do
       post :button_run_web_autotests
+      post :button_run_soap_autotests
     end
   end
 end
