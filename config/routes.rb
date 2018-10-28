@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   root to: 'home#index'
+  post '/some_action' => 'work#some_action'
 
   resources :work do
     collection do
