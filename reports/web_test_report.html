@@ -1,5 +1,20 @@
-.
+F
 
-Finished in 4.9 seconds (files took 6.26 seconds to load)
-1 example, 0 failures
+Failures:
+
+  1) True of false tests thes test will be true
+     Failure/Error: expect(first_link.text).to eq('Learning Selenium Java Hello World Example - Digital App Consultancy')
+
+       expected: "Learning Selenium Java Hello World Example - Digital App Consultancy"
+            got: "Selenium Python - Selenium Python"
+
+       (compared using ==)
+     # ./spec/web/selenium_test_spec.rb:20:in `block (2 levels) in <top (required)>'
+
+Finished in 2.85 seconds (files took 6.03 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/web/selenium_test_spec.rb:12 # True of false tests thes test will be true
 

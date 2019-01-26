@@ -39,7 +39,7 @@
       <div class="jumbotron">
         <h1>Web auto testing</h1>
         <div>
-         <%= form_tag(button_run_web_autotests_work_index_path, method: 'post') do %>
+         <%= form_tag(web_autotest_work_index_path, method: 'post') do %>
            <%= submit_tag('Run Web auto tests', class: 'btn btn-lg btn-primary') %>
          <% end %>
         </div>
@@ -52,12 +52,35 @@
       <div class="jumbotron">
         <h1>Integration auto testing</h1>
         <div>
-         <%= form_tag(button_run_soap_autotests_work_index_path, method: 'post') do %>
+         <%= form_tag(soap_autotest_work_index_path, method: 'post') do %>
            <%= submit_tag('Run SOAP auto tests', class: 'btn btn-lg btn-primary') %>
          <% end %>
         </div>
         <p class="lead">Test results:</p>
         <div><%= @rspec_soap_result %></div>
+      </div>
+    </main>
+
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <h1>Performance auto testing</h1>
+
+        <div>
+         <%= form_tag(parallel_performance_autotest_work_index_path, method: 'post') do %>
+           <%= text_field_tag(:count) %>
+           <%= submit_tag('Run parallel performance auto tests', class: 'btn btn-lg btn-primary') %>
+         <% end %>
+        </div>
+        <br>
+        <div>
+         <%= form_tag(sequential_performance_autotest_work_index_path, method: 'post') do %>
+           <%= text_field_tag(:count) %>
+           <%= submit_tag('Run sequential performance auto tests', class: 'btn btn-lg btn-primary') %>
+         <% end %>
+        </div>
+
+        <p class="lead">Test results:</p>
+        <div><%= @rspec_performance_result %></div>
       </div>
     </main>
 

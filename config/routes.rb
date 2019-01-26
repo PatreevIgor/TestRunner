@@ -6,8 +6,10 @@ Rails.application.routes.draw do
 
   resources :work do
     collection do
-      post :button_run_web_autotests
-      post :button_run_soap_autotests
+      post :web_autotest
+      post :soap_autotest
+      post :parallel_performance_autotest
+      post :sequential_performance_autotest
     end
   end
 end
